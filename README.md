@@ -1,4 +1,4 @@
-# trading-bot-backtesting
+# Vôňotéka
 
-I love you Peto.
+Slovenský obchod vzoriek parfúmov. Vyrobené z lásky k milovanej Barborke <3
 
