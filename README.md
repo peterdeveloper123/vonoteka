@@ -1,6 +1,6 @@
-\#vonoteka
-
-
+# Webstránka na profesionálny predaj kvalitných parfumov.
+https://peterdeveloper123.github.io/vonoteka/
+# Plánované url zdroje voňaviek:
 
 https://www.1907perfumeries.sk/
 
