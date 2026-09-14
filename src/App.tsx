@@ -3,6 +3,7 @@ import { Container } from "@mui/material";
 import { Menu } from "./header/Menu";
 import { LoginForm } from "./components/LoginForm";
 import { Parfumes } from "./components/Parfumes";
+import { Home } from "./components/Home";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
 }
 
 function HomePage() {
-  return <h1>Domov</h1>;
+  return <Home />;
 }
 
 function AboutPage() {
