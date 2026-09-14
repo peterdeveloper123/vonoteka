@@ -5,7 +5,6 @@ import {
   CardContent,
   Stack,
   Typography,
-  Divider,
 } from "@mui/material";
 
 export function Parfumes() {
