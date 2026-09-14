@@ -4,6 +4,7 @@ import { Menu } from "./header/Menu";
 import { LoginForm } from "./components/LoginForm";
 import { Parfumes } from "./components/Parfumes";
 import { Home } from "./components/Home";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<Login />} />
         </Routes>
       </Container>
+      <Footer />
     </BrowserRouter>
   );
 }
