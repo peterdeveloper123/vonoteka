@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { Container } from "@mui/material";
 import { Menu } from "./header/Menu";
+import { LoginForm } from "./components/LoginForm";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/parfums" element={<ParfumsPage />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Login />} />
         </Routes>
       </Container>
     </BrowserRouter>
@@ -31,8 +32,8 @@ function ParfumsPage() {
   return <h1>Parfumy</h1>;
 }
 
-function Profile() {
-  return <h1>Profile</h1>;
+function Login() {
+  return <LoginForm />;
 }
 
 export default App;

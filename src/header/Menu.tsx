@@ -46,10 +46,10 @@ export function Menu() {
           gap: "min(48px, 9.057vw)",
         }}
       >
-        <MenuButton to="/">DOMOV</MenuButton>
-        <MenuButton to="/about">O NÁS</MenuButton>
-        <MenuButton to="/parfums">PARFUMY</MenuButton>
-        <MenuButton to="/profile">PROFIL</MenuButton>
+        <MenuButton to="/">HOME</MenuButton>
+        <MenuButton to="/about">ABOUT</MenuButton>
+        <MenuButton to="/parfums">PARFUMES</MenuButton>
+        <MenuButton to="/profile">LOGIN</MenuButton>
       </Toolbar>
     </AppBar>
   );
