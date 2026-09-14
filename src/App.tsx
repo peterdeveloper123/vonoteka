@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Container } from "@mui/material";
 import { Menu } from "./header/Menu";
 import { LoginForm } from "./components/LoginForm";
+import { Parfumes } from "./components/Parfumes";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function AboutPage() {
 }
 
 function ParfumsPage() {
-  return <h1>Parfumy</h1>;
+  return <Parfumes />;
 }
 
 function Login() {
