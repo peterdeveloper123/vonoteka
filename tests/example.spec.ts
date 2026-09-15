@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-test("get started link", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
+test("get parfumes", async ({ page }) => {
+  await page.goto("https://www.1907perfumeries.sk/");
 
-  // Click the get started link.
-  await page.getByRole("link", { name: "Get started" }).click();
+  const categories = page.locator(".root-eshop-menu > li > a > strong");
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(
-    page.getByRole("heading", { name: "Installation" }),
-  ).toBeVisible();
+  await categories.first().waitFor({ state: "visible" });
+
+  const names = await categories.allTextContents();
+
+  console.log(names.map((name) => name.trim()));
 });
