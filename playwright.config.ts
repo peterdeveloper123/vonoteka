@@ -4,13 +4,20 @@ export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
   reporter: "html",
+
   use: {
-    trace: "on-first-retry",
+    ...devices["Desktop Chrome"],
   },
+
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "getProductUrls",
+      testMatch: /1907perfumeries\.spec\.ts/,
+    },
+    {
+      name: "getProducts",
+      testMatch: /1907perfumeries\.spec\.ts/,
+      dependencies: ["getProductUrls"],
     },
   ],
 });
