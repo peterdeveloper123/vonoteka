@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 let runOnlyActive = true;
-let activeTestFile = "mementolux.spec.ts";
+let activeTestFile = "adoraniche.spec.ts";
 
 const projects = [
   {
@@ -47,6 +47,17 @@ const projects = [
     testMatch: /mementolux\.spec\.ts/,
     grep: /mementoluxCollectProducts$/,
     dependencies: ["mementoluxCollectProductUrls"],
+  },
+  {
+    name: "adoranicheCollectProductUrls",
+    testMatch: /adoraniche\.spec\.ts/,
+    grep: /adoranicheCollectProductUrls$/,
+  },
+  {
+    name: "adoranicheCollectProducts",
+    testMatch: /adoraniche\.spec\.ts/,
+    grep: /adoranicheCollectProducts$/,
+    dependencies: ["adoranicheCollectProductUrls"],
   },
 ];
 
