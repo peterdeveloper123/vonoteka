@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
   reporter: "html",
+  timeout: 60 * 60 * 1000,
 
   use: {
     ...devices["Desktop Chrome"],
@@ -11,13 +12,15 @@ export default defineConfig({
 
   projects: [
     {
-      name: "getProductUrls",
+      name: "collectProductUrls",
       testMatch: /1907perfumeries\.spec\.ts/,
+      grep: /collectProductUrls$/,
     },
     {
-      name: "getProducts",
+      name: "collectProducts",
       testMatch: /1907perfumeries\.spec\.ts/,
-      dependencies: ["getProductUrls"],
+      grep: /collectProducts$/,
+      dependencies: ["collectProductUrls"],
     },
   ],
 });
