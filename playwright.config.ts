@@ -10,17 +10,30 @@ export default defineConfig({
     ...devices["Desktop Chrome"],
   },
 
+  testMatch: ["**/1907perfumeries.spec.ts"],
+
   projects: [
     {
-      name: "collectProductUrls",
+      name: "1907perfumeriesCollectProductUrls",
       testMatch: /1907perfumeries\.spec\.ts/,
-      grep: /collectProductUrls$/,
+      grep: /1907perfumeriesCollectProductUrls$/,
     },
     {
-      name: "collectProducts",
+      name: "1907perfumeriesCollectProducts",
       testMatch: /1907perfumeries\.spec\.ts/,
-      grep: /collectProducts$/,
-      dependencies: ["collectProductUrls"],
+      grep: /1907perfumeriesCollectProducts$/,
+      dependencies: ["1907perfumeriesCollectProductUrls"],
+    },
+    {
+      name: "leparfumlechicCollectProductUrls",
+      testMatch: /leparfumlechic\.spec\.ts/,
+      grep: /leparfumlechicCollectProductUrls$/,
+    },
+    {
+      name: "leparfumlechicCollectProducts",
+      testMatch: /leparfumlechic\.spec\.ts/,
+      grep: /leparfumlechicCollectProducts$/,
+      dependencies: ["leparfumlechicCollectProductUrls"],
     },
   ],
 });

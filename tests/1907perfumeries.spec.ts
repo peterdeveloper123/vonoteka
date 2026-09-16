@@ -7,7 +7,7 @@ const productsFile = `${resultsDirectory}/products.json`;
 
 const workerCount = 10;
 
-test("collectProductUrls", async ({ page }) => {
+test("1907perfumeriesCollectProductUrls", async ({ page }) => {
   await page.goto("https://www.1907perfumeries.sk/", {
     waitUntil: "domcontentloaded",
   });
@@ -53,7 +53,7 @@ test("collectProductUrls", async ({ page }) => {
   );
 });
 
-test("collectProducts", async ({ context }) => {
+test("1907perfumeriesCollectProducts", async ({ context }) => {
   const productUrls: string[] = JSON.parse(
     await readFile(productUrlsFile, "utf8"),
   );
